@@ -6,6 +6,22 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_count",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [],
 				"name": "count",
 				"outputs": [
@@ -20,8 +36,47 @@
 			},
 			{
 				"inputs": [],
+				"name": "decrement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "increament",
 				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "setName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "newName",
+						"type": "string"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -54,11 +109,11 @@
 	},
 	"sources": {
 		"Counter.sol": {
-			"keccak256": "0x48a4b7bccdd2896709c71dac2546ba3455dde7fcd17d3deb517faba602174127",
+			"keccak256": "0xa48cf2878dfbe00ec061a82b94dd60e713d1815f343a69624e48de2a4f8a66ff",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bdc4027fa38f711521daa081abbb29345735b185931b94a0cdbb0fc6ee5b4483",
-				"dweb:/ipfs/QmTLCGju4RDTnH7AJLiaxd8oHUUCSQY5zzwsWWt9KRcTXd"
+				"bzz-raw://336f9a2b54594c258eecbef8eb1706b01109d40e4ab33f9dac4be721bd0c2e7b",
+				"dweb:/ipfs/QmYtZ9TkXyVvRB4oXwqr8Myjf29nn9KcamXNhyywP7kvoy"
 			]
 		}
 	},
