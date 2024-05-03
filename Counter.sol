@@ -10,6 +10,7 @@ contract Counter {
         name = _name;
         count = _count;
     }
+
     function increament () public {
         count ++ ;
     }
@@ -23,6 +24,4 @@ contract Counter {
         name = _name ;
         return  name ;
     }
-
-    
 }
