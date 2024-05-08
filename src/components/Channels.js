@@ -1,7 +1,5 @@
 const Channels = ({ provider, account, dappcord, channels, currentChannel, setCurrentChannel }) => {
   const channelHandler = async (channel) => {
-    // Check if user has joined
-    // If they haven't allow them to mint.
     const hasJoined = await dappcord.hasJoined(channel.id, account)
 
     if (hasJoined) {

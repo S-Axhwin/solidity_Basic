@@ -10,7 +10,7 @@ const socket = io('ws://localhost:3030')
 
 const Messages = ({ account, messages, currentChannel }) => {
   const [message, setMessage] = useState("")
-
+  
   const messageEndRef = useRef(null)
 
   const sendMessage = async (e) => {
@@ -37,20 +37,22 @@ const Messages = ({ account, messages, currentChannel }) => {
 
   useEffect(() => {
     scrollHandler()
-  })
+  }, [])
 
   return (
     <div className="text">
       <div className="messages">
 
         {currentChannel && messages.filter(message => message.channel === currentChannel.id.toString()).map((message, index) => (
-          <div className="message" key={index}>
+          <div className={`message`} key={index} >
+            <div className={` ${message.account == account ? "right" : ""}`} style={{display: "flex"}}>
             <img src={person} alt="Person" />
             <div className="message_content">
               <h3>{message.account.slice(0, 6) + '...' + message.account.slice(38, 42)}</h3>
               <p>
                 {message.text}
               </p>
+            </div>
             </div>
           </div>
         ))}
@@ -67,7 +69,7 @@ const Messages = ({ account, messages, currentChannel }) => {
         )}
 
         <button type="submit">
-          <img src={send} alt="Send Message" />
+          <img src={send} alt="Send Message" style={{border: "none"}} />
         </button>
       </form>
     </div>
